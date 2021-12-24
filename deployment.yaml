@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep3
+spec:
+  replicas: 4
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      a: b
+  template:
+    metadata:
+      labels:
+        a: b
+    spec:
+      containers:
+        - name: web
+          image: httpd
