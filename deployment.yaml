@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: dep3
 spec:
-  replicas: 4
+  replicas: 2
   strategy:
     type: Recreate
   selector:
@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: web
-          image: httpd
+          image: nginx
